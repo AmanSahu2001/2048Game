@@ -48,13 +48,14 @@ async function handleInput(e) {
   }
 
   grid.cells.forEach(cell => cell.mergeTiles())
-
   const newTile = new Tile(gameBoard)
   grid.randomEmptyCell().tile = newTile
 
+
   if (!canMoveUp() && !canMoveDown() && !canMoveLeft() && !canMoveRight()) {
     newTile.waitForTransition(true).then(() => {
-      alert("You lose")
+      const response = confirm("Game Over. Do you want to Play Again?")
+      if(response) window.location.reload()
     })
     return
   }

@@ -53,6 +53,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 6vmin;
   width: var(--cell-size);
   height: var(--cell-size);
   background-color: red;
@@ -65,6 +66,7 @@ body {
   animation: show 200ms ease-in-out;
   transition: 100ms ease-in-out;
 }
+
 
 @keyframes show {
   0% {
