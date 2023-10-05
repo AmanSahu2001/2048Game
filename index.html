@@ -1,20 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>2048 Game</title>
-  <link rel="shortcut icon" type="image/x-icon" href="favicon.png">
-  <link rel="stylesheet" href="styles.css">
-  <script src="script.js" type="module"></script>
-</head>
-<body>
-  <div class="container">
-    <h1>2048</h1>
-    <h2>Use Arrow Keys to move tiles</h2>
-    <div id="score">Score : 0</div>
-    <div id="game-board">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2048 Game</title>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" type="module"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="content-container">
+        <button id="myBtn">Rules</button>
+        <div id="myModal" class="modal">
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>
+              In the game of 2048, players slide numbered tiles on a 4x4 grid to
+              combine identical numbers, with the ultimate goal of reaching the
+              tile labeled "2048." The rules are simple:
+              <strong
+                >players make moves in four directions using their respective
+                arrow keys on keyboard—up, down, left, or right—</strong
+              >each turn causing all tiles to slide as far as possible in the
+              chosen direction. When two tiles with the same number collide,
+              they merge into a new tile with a value equal to the sum of their
+              original values. New tiles with a value of 2 or 4 appear after
+              each move. The game continues until the player is unable to make
+              any more moves, leading to a conclusion. Strategic planning and
+              careful positioning are key to achieving the highest score in this
+              engaging puzzle game.
+            </p>
+          </div>
+        </div>
+        <h1>2048</h1>
+        <div id="score">Score 0</div>
+      </div>
+      <div id="game-board"></div>
     </div>
-</body>
+  </body>
 </html>

@@ -111,7 +111,7 @@ class Cell {
 
 function getScore() {
   console.log(score);
-  document.getElementById("score").innerHTML = `Score : ${score}`;
+  document.getElementById("score").innerHTML = `Score ${score}`;
 }
 
 function createCellElements(gridElement) {
