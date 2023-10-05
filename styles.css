@@ -1,25 +1,38 @@
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   font-family: Arial;
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
 h1 {
-  color: #CCC;
+  color: #ccc;
   display: block;
-  width:fit-content;
+  width: fit-content;
   margin: auto;
-  font-size: 16vmin;
-  padding-bottom: 0.5vmin;
+  font-size: 10vmin;
 }
 
 h2 {
-  color:beige;
+  color: beige;
   display: block;
-  font-size: 3vmin;
+  font-size: 2.4vmin;
   margin: auto;
-  width:fit-content;
   padding: 0;
-  padding-bottom: 1vmin;
+}
+
+#score {
+  display: block;
+  font-weight: bolder;
+  margin: auto;
+  color: whitesmoke;
+  font-size: 3vmin;
+  padding: 1vmin;
 }
 
 body {
@@ -36,7 +49,7 @@ body {
   display: grid;
   grid-template-columns: repeat(var(--grid-size), var(--cell-size));
   grid-template-rows: repeat(var(--grid-size), var(--cell-size));
-  background-color: #CCC;
+  background-color: #ccc;
   gap: var(--cell-gap);
   border-radius: 1vmin;
   padding: var(--cell-gap);
@@ -44,7 +57,7 @@ body {
 }
 
 .cell {
-  background-color: #AAA;
+  background-color: #aaa;
   border-radius: 1vmin;
 }
 
@@ -67,10 +80,9 @@ body {
   transition: 100ms ease-in-out;
 }
 
-
 @keyframes show {
   0% {
-    opacity: .5;
+    opacity: 0.5;
     transform: scale(0);
   }
 }
